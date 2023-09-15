@@ -28,12 +28,15 @@ public class MainController {
     }
     
     @PatchMapping("api/v1/task/{taskNumber}")
-    public String patchMethod(){
+    public String patchPathVariable(
+        @PathVariable("taskNumber") String taskNumber
+    ){
         return "patchMethod";
     }
     
     @DeleteMapping("api/v1/task/{taskNumber}")
-    public String deleteMethod(){
+    public String deletePathVariable( String taskNumber   
+    ){
         return "deleteMethod";
     }
 
