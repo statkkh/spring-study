@@ -1,4 +1,4 @@
-package com.kimkyunghoon.task.controller;
+package com.kimkh.task.controller;
 
 
 import org.springframework.web.bind.annotation.DeleteMapping;

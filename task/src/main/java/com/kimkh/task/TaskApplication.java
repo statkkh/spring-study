@@ -1,4 +1,4 @@
-package com.kimkyunghoon.task;
+package com.kimkh.task;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
