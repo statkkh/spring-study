@@ -7,41 +7,44 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
+@RequestMapping("/api/v1")
 public class MainController {
     
-    @GetMapping("api/v1/task/{taskNumber}")
+    @GetMapping("task/{taskNumber}")
     public String getPathVariable(
         @PathVariable("taskNumber") String taskNumber
     ){
         return "getMethod";
     }
 
-    @PostMapping("api/v1/task")
+    @PostMapping("task")
     public String postPathVariable(
         @PathVariable("taskNumber") String taskNumber
     ){
         return "postMethod" ;
     }
     
-    @PatchMapping("api/v1/task/{taskNumber}")
+    @PatchMapping("task/{taskNumber}")
     public String patchPathVariable(
         @PathVariable("taskNumber") String taskNumber
     ){
         return "patchMethod";
     }
     
-    @DeleteMapping("api/v1/task/{taskNumber}")
+    @DeleteMapping("task/{taskNumber}")
     public String deletePathVariable( String taskNumber   
     ){
         return "deleteMethod";
     }
 
     
-    @PostMapping("parameter")
+    @PostMapping("/parameter")
     public String postParameter(
         @RequestParam("scheduleName") String scheduleName,
         @RequestParam("category") String category,
@@ -52,7 +55,7 @@ public class MainController {
         return scheduleName + category + decription + date + time;
     }
 
-    @PutMapping("parameter")
+    @PutMapping("/parameter")
     public String putParameter(
         @RequestParam("scheduleName") String scheduleName,
         @RequestParam("category") String category,
