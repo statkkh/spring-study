@@ -27,7 +27,7 @@ import lombok.Setter;
 
 public class PatchValidationDto {
 
-    @NotBlank
+    @NotBlank(message = "HTTP Message가 아니다.")
     private String scheduleName;
     private String category;
     private String description;
