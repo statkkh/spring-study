@@ -23,7 +23,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/v1")
 
-// @RequiredArgsConstructor
+@RequiredArgsConstructor
 public class MainController {
     
     @GetMapping("task/{taskNumber}")
